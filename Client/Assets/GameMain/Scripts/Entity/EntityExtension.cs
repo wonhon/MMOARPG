@@ -39,7 +39,22 @@ namespace SuperBiomass
         {
             entityComponent.AttachEntity(entity.Entity, ownerId, parentTransformPath, userData);
         }
-        
+
+        public static void ShowMyPlayer(this EntityComponent entityComponent, MyPlayerData data)
+        {
+            entityComponent.ShowEntity(typeof(MyPlayer), "Player", Constant.AssetPriority.MyPlayerAsset, data);
+        }
+
+        public static void ShowPlayer(this EntityComponent entityComponent, PlayerData data)
+        {
+            entityComponent.ShowEntity(typeof(Player), "Player", Constant.AssetPriority.PlayerAsset, data);
+        }
+
+        public static void ShowEffect(this EntityComponent entityComponent, EffectData data)
+        {
+            entityComponent.ShowEntity(typeof(Effect), "Effect", Constant.AssetPriority.EffectAsset, data);
+        }
+
         private static void ShowEntity(this EntityComponent entityComponent, Type logicType, string entityGroup, int priority, EntityData data)
         {
             if (data == null)

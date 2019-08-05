@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 2e68a285a7ee26a408c344da5f628b35
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: environment_Building_qingsangcheng_001_f01
+    100004: environment_Building_qingsangcheng_001_f02
+    100006: environment_Building_qingsangcheng_001_f03
+    100008: environment_Building_qingsangcheng_001_f04
+    100010: environment_Building_qingsangcheng_001_f05
+    100012: environment_Building_qingsangcheng_001_f06
+    100014: environment_Building_qingsangcheng_001_f07
+    100016: environment_Building_qingsangcheng_001_f08
+    400000: //RootNode
+    400002: environment_Building_qingsangcheng_001_f01
+    400004: environment_Building_qingsangcheng_001_f02
+    400006: environment_Building_qingsangcheng_001_f03
+    400008: environment_Building_qingsangcheng_001_f04
+    400010: environment_Building_qingsangcheng_001_f05
+    400012: environment_Building_qingsangcheng_001_f06
+    400014: environment_Building_qingsangcheng_001_f07
+    400016: environment_Building_qingsangcheng_001_f08
+    2300000: environment_Building_qingsangcheng_001_f01
+    2300002: environment_Building_qingsangcheng_001_f02
+    2300004: environment_Building_qingsangcheng_001_f03
+    2300006: environment_Building_qingsangcheng_001_f04
+    2300008: environment_Building_qingsangcheng_001_f05
+    2300010: environment_Building_qingsangcheng_001_f06
+    2300012: environment_Building_qingsangcheng_001_f07
+    2300014: environment_Building_qingsangcheng_001_f08
+    3300000: environment_Building_qingsangcheng_001_f01
+    3300002: environment_Building_qingsangcheng_001_f02
+    3300004: environment_Building_qingsangcheng_001_f03
+    3300006: environment_Building_qingsangcheng_001_f04
+    3300008: environment_Building_qingsangcheng_001_f05
+    3300010: environment_Building_qingsangcheng_001_f06
+    3300012: environment_Building_qingsangcheng_001_f07
+    3300014: environment_Building_qingsangcheng_001_f08
+    4300000: environment_Building_qingsangcheng_001_f08
+    4300002: environment_Building_qingsangcheng_001_f01
+    4300004: environment_Building_qingsangcheng_001_f02
+    4300006: environment_Building_qingsangcheng_001_f03
+    4300008: environment_Building_qingsangcheng_001_f04
+    4300010: environment_Building_qingsangcheng_001_f05
+    4300012: environment_Building_qingsangcheng_001_f06
+    4300014: environment_Building_qingsangcheng_001_f07
+    9500000: //RootNode
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f1
+    second: {fileID: 2100000, guid: e0d9667a0b2c53c45b262f960041c86c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f2
+    second: {fileID: 2100000, guid: 078be1c4def81bb4ab578c6a90c96aab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f3
+    second: {fileID: 2100000, guid: bd52f70d7a05d4f42b4e0f3882afea7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f4
+    second: {fileID: 2100000, guid: 030df9090470b2c4dac969bb7716c97e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f5
+    second: {fileID: 2100000, guid: e7151bb89ce47c44381f5b9e696a43e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f6
+    second: {fileID: 2100000, guid: 9c69c0ac127d7e8469c3829ef6211296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f7
+    second: {fileID: 2100000, guid: 06f2a57e8c2edda4c8a948470607857e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: environment_Building_qingsangcheng_001_f8
+    second: {fileID: 2100000, guid: 07fb8784bab1eac45972f30dcc95daf3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 0
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

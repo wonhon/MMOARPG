@@ -1,11 +1,9 @@
 ﻿using GameFramework;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 
-namespace SuperBiomass
+namespace SuperBiomass.Editor
 {
     public class SetVersion
     {

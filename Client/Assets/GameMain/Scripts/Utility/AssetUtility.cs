@@ -11,7 +11,7 @@ namespace SuperBiomass
 {
     public static class AssetUtility
     {
-        private static string m_Root = "Assets/GameMain/Down";
+        private static string m_Root = "Assets/GameMain/Download";
 
         public static string GetConfigAsset(string assetName, LoadType loadType)
         {

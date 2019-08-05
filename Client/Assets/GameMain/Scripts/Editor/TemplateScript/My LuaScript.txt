@@ -1,0 +1,17 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+//===================================================
+//作    者：#Author#
+//创建时间：#CreateTime#
+//备    注：
+//===================================================
+
+/// <summary>
+/// 
+/// </summary>
+public class MyLuaScript : MonoBehaviour
+{
+
+}

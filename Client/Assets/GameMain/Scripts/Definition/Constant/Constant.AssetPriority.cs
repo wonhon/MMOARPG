@@ -24,7 +24,9 @@ namespace SuperBiomass
             public const int UIFormAsset = 50;
             public const int UISoundAsset = 30;
 
-            
+            public const int MyPlayerAsset = 90;
+            public const int PlayerAsset = 80;
+            public const int EffectAsset = 80;
         }
     }
 }

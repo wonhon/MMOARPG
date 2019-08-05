@@ -24,6 +24,9 @@ namespace SuperBiomass
 
             public const string TargetableObjectLayerName = "Targetable Object";
             public static readonly int TargetableObjectLayerId = LayerMask.NameToLayer(TargetableObjectLayerName);
+
+            public const string GroundtLayerName = "Ground";
+            public static readonly int GroundLayerId = LayerMask.NameToLayer(GroundtLayerName);
         }
     }
 }
