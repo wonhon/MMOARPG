@@ -8,10 +8,11 @@ using UnityEngine;
 //备    注：
 //===================================================
 
-/// <summary>
-/// 
-/// </summary>
-public class #SCRIPTNAME# : MonoBehaviour
+namespace SuperBiomass
 {
+	public class #SCRIPTNAME# : MonoBehaviour
+	{
 
+	}
 }
+

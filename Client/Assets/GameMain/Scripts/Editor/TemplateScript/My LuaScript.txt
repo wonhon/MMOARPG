@@ -7,11 +7,3 @@ using UnityEngine;
 //创建时间：#CreateTime#
 //备    注：
 //===================================================
-
-/// <summary>
-/// 
-/// </summary>
-public class MyLuaScript : MonoBehaviour
-{
-
-}
