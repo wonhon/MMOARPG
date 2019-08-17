@@ -11,7 +11,7 @@ namespace SuperBiomass
     {
         [SerializeField]
         private PlayerData m_PlayerData;
-        
+
         private Animator m_Animator;
         private CharacterController m_CharacterController;
         private Seeker m_Seeker;
@@ -40,14 +40,14 @@ namespace SuperBiomass
             m_AI = GetComponent<IAstarAI>();
         }
 
-        protected override void OnHide(object userData)
+        protected override void OnHide(bool isShutdown, object userData)
         {
             m_Animator = null;
             m_CharacterController = null;
             m_Seeker = null;
             m_AI = null;
 
-            base.OnHide(userData);
+            base.OnHide(isShutdown, userData);
         }
 
         protected override void OnHurt(Entity attacker)
@@ -76,7 +76,7 @@ namespace SuperBiomass
         {
             CameraCtrl.Instance.transform.position = CachedTransform.position;
             CameraCtrl.Instance.LookAt(CachedTransform.position);
-            
+
             if (m_Seeker != null && m_AI != null)
             {
                 if (m_AI.reachedEndOfPath)
