@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/GameFramwork.unity
     guid: 2b430b97c2b932f49802c9a371599313
   - enabled: 1
+    path: Assets/GameMain/Download/Scenes/Scene_Loading.unity
+    guid: 9d6cf654adb159745aefe4795c17e421
+  - enabled: 1
+    path: Assets/GameMain/Download/Scenes/Scene_LogOn.unity
+    guid: 3460d729fb2d591478c7a91b32d4f860
+  - enabled: 1
     path: Assets/GameMain/Download/Scenes/Scene_SelectRole.unity
     guid: ee9f07c4ee67a6144a6192d7129e8401
   - enabled: 1
