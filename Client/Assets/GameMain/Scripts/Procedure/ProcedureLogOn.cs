@@ -11,9 +11,10 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace SuperBiomass
 {
-    public class ProcedureMenu : ProcedureBase
+    public class ProcedureLogOn : ProcedureBase
     {
-        private bool m_StartGame = false;
+        private LogOnForm m_LogOnForm;
+        private bool m_SelectRole = false;
 
         public override bool UseNativeDialog
         {
@@ -23,9 +24,9 @@ namespace SuperBiomass
             }
         }
 
-        public void StartGame()
+        public void SelectRole()
         {
-            m_StartGame = true;
+            m_SelectRole = true;
         }
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -34,8 +35,8 @@ namespace SuperBiomass
 
             GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 
-            m_StartGame = false;
-            GameEntry.UI.OpenUIForm(UIFormId.SelectRole, this);
+            m_SelectRole = false;
+            GameEntry.UI.OpenUIForm(UIFormId.LogOn, this);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -43,16 +44,22 @@ namespace SuperBiomass
             base.OnLeave(procedureOwner, isShutdown);
 
             GameEntry.Event.Unsubscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
+
+            if (m_LogOnForm != null)
+            {
+                m_LogOnForm.Close(isShutdown);
+                m_LogOnForm = null;
+            }
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
-            if (m_StartGame)
+            if (m_SelectRole)
             {
-                procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.ChangAn);
-                procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureMain));
+                procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.SelectRole);
+                procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureMenu));
                 ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }
@@ -64,6 +71,8 @@ namespace SuperBiomass
             {
                 return;
             }
+
+            m_LogOnForm = (LogOnForm)ne.UIForm.Logic;
         }
     }
 }

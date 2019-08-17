@@ -12,6 +12,7 @@ namespace SuperBiomass
         public static class ProcedureData
         {
             public const string NextSceneId = "NextSceneId";
+            public const string NextProcedure = "NextProcedureId";
         }
     }
 }

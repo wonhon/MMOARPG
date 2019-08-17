@@ -99,7 +99,8 @@ namespace SuperBiomass
                 m_GotoMenuDelaySeconds += elapseSeconds;
                 if (m_GotoMenuDelaySeconds >= GameOverDelayedSeconds)
                 {
-                    procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, GameEntry.Config.GetInt("Scene.Menu"));
+                    procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.SelectRole);
+                    procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureMenu));
                     ChangeState<ProcedureChangeScene>(procedureOwner);
                     return;
                 }

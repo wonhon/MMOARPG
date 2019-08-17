@@ -8,6 +8,7 @@
 using GameFramework;
 using GameFramework.Event;
 using GameFramework.Resource;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -81,7 +82,8 @@ namespace SuperBiomass
                 }
             }
 
-            procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, GameEntry.Config.GetInt("Scene.Menu"));
+            procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.LogOn);
+            procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureLogOn));
             ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 
