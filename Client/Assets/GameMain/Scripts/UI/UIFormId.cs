@@ -20,18 +20,18 @@ namespace SuperBiomass
         DialogForm = 1,
 
         /// <summary>
-        /// 主菜单。
+        /// 加载界面
         /// </summary>
-        MenuForm = 100,
+        Loading = 100,
 
         /// <summary>
-        /// 设置。
+        /// 登录界面
         /// </summary>
-        SettingForm = 101,
+        LogOn = 101,
 
         /// <summary>
-        /// 关于。
+        /// 选择角色界面
         /// </summary>
-        AboutForm = 102,
+        SelectRole = 102,
     }
 }
