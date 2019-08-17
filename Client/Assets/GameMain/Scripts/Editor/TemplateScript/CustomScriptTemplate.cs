@@ -141,6 +141,7 @@ class CreateLuaScriptAsset : EndNameEditAction
 /// btn_'Name'<Button>,
 /// tog_'Name'<Toggle>,
 /// slider_'Name'<Slider>,
+/// input_'Name'<InputFiled>
 /// </summary>
 class GeneralUIScript
 {
@@ -150,6 +151,7 @@ class GeneralUIScript
     private static Dictionary<string, StringBuilder> m_Buttons;
     private static Dictionary<string, StringBuilder> m_Toggles;
     private static Dictionary<string, StringBuilder> m_Sliders;
+    private static Dictionary<string, StringBuilder> m_InputFields;
 
     private static StringBuilder m_FileConent;
 
@@ -166,6 +168,7 @@ class GeneralUIScript
         Init(ref m_Buttons);
         Init(ref m_Toggles);
         Init(ref m_Sliders);
+        Init(ref m_InputFields);
 
         ForeachTransform(Selection.activeGameObject.transform);
         GeneralFile(Selection.activeGameObject.name);
@@ -217,6 +220,7 @@ class GeneralUIScript
         GeneralProperty(m_Buttons, m_FileConent, "Button");
         GeneralProperty(m_Toggles, m_FileConent, "Toggle");
         GeneralProperty(m_Sliders, m_FileConent, "Slider");
+        GeneralProperty(m_InputFields, m_FileConent, "InputField");
 
         m_FileConent.AppendLine("   }");
         m_FileConent.AppendLine("}");
@@ -285,6 +289,10 @@ class GeneralUIScript
             {
                 SetPath(m_Sliders, childGo);
             }
+            else if (flag.Equals("input"))
+            {
+                SetPath(m_InputFields, childGo);
+            }
         }
 
         ForeachTransform(child);
@@ -322,6 +330,8 @@ class GeneralUIScript
         m_Toggles = null;
         m_Sliders.Clear();
         m_Sliders = null;
+        m_InputFields.Clear();
+        m_InputFields = null;
     }
 }
 
