@@ -14,7 +14,8 @@ namespace SuperBiomass
     public class ProcedureMenu : ProcedureBase
     {
         private bool m_StartGame = false;
-
+        private SelectRoleForm m_SelectRoleForm;
+        
         public override bool UseNativeDialog
         {
             get
@@ -64,6 +65,8 @@ namespace SuperBiomass
             {
                 return;
             }
+
+            m_SelectRoleForm = ne.UIForm.Logic as SelectRoleForm;
         }
     }
 }
