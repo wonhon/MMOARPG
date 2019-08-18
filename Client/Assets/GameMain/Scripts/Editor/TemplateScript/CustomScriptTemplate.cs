@@ -136,7 +136,7 @@ class CreateLuaScriptAsset : EndNameEditAction
 /// 引用物体命名规则：
 /// go__'Name'<GameObject>, 
 /// img_'Name'<Image>,
-/// text_'Name'<Text>,
+/// txt_'Name'<Text>,
 /// img_'Name'<Image>,
 /// btn_'Name'<Button>,
 /// tog_'Name'<Toggle>,
@@ -250,7 +250,7 @@ class GeneralUIScript
     {
         foreach (var fullName in dic.Keys)
         {
-            string name = fullName.Split('_')[1];
+            string name = GetAttributeName(fullName);
             sb.AppendFormat("       [SerializeField]{0}", m_Linebreak);
             sb.AppendFormat("       private {0} m_{1}{2};{3}", flagName, name.Substring(0, 1).ToUpper(), name.Substring(1), m_Linebreak);
             sb.AppendFormat("{0}", m_Linebreak);
@@ -261,7 +261,7 @@ class GeneralUIScript
     {
         GameObject childGo = child.gameObject;
         string[] names = childGo.name.Split('_');
-        if (names.Length == 2)
+        if (names.Length >= 2)
         {
             string flag = names[0];
 
@@ -273,7 +273,7 @@ class GeneralUIScript
             {
                 SetPath(m_Images, childGo);
             }
-            else if (flag.Equals("text"))
+            else if (flag.Equals("txt"))
             {
                 SetPath(m_Texts, childGo);
             }
@@ -314,6 +314,14 @@ class GeneralUIScript
         }
 
         Debug.Log(string.Format("key: {0}, value:{1}", name, dic[name]));
+    }
+
+    private static string GetAttributeName(string fullName)
+    {
+        string flag = fullName.Split('_')[0];
+        string attrName = fullName.Substring(flag.Length+1);
+
+        return attrName;
     }
 
     private void OnDestroy()
