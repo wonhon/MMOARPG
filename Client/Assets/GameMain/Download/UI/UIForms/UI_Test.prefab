@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 1679580105263009885}
   - component: {fileID: 5262077857711814586}
   m_Layer: 5
-  m_Name: text_text
+  m_Name: txt_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,10 +971,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4069110132340594615}
   - component: {fileID: 5603753819007318925}
-  - component: {fileID: 8482733278141165270}
   - component: {fileID: 9084714316278597845}
   m_Layer: 5
-  m_Name: UI_Test 1
+  m_Name: UI_Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,27 +1012,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9097478643270815243}
   m_CullTransparentMesh: 0
---- !u!223 &8482733278141165270
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9097478643270815243}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!114 &9084714316278597845
 MonoBehaviour:
   m_ObjectHideFlags: 0
