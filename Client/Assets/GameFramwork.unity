@@ -254,8 +254,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724513823038749984, guid: d96525c2696a0ce4d89a738cc21abede,
         type: 3}
-      propertyPath: m_GameSpeed
-      value: 1
+      propertyPath: m_JsonHelperTypeName
+      value: SuperBiomass.LitJsonHelper
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96525c2696a0ce4d89a738cc21abede, type: 3}
@@ -444,6 +444,30 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22462958, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22462958, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 22462958, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 22462958, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492588, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492588, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f79ae92b471fbcf45a528587ddb2e682, type: 3}

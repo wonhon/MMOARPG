@@ -6,8 +6,9 @@
 //------------------------------------------------------------
 
 using GameFramework.Event;
+using GameFramework.Network;
 using HedgehogTeam.EasyTouch;
-using Pathfinding;
+using SuperBiomass.Network;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
@@ -25,6 +26,7 @@ namespace SuperBiomass
         private Transform m_Target;
         private ETCJoystick m_ETCJoystick;
         private bool m_IsMoveStart;
+        private INetworkChannel m_NetworkChannel;
 
         public override bool UseNativeDialog
         {
@@ -58,6 +60,8 @@ namespace SuperBiomass
 
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Subscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
+
+            m_NetworkChannel = GameEntry.Network.GetNetworkChannel("Main Server");
 
             EasyTouch.On_Swipe += OnSwipe;
             EasyTouch.On_PinchIn += OnPinchIn;
@@ -99,8 +103,8 @@ namespace SuperBiomass
                 m_GotoMenuDelaySeconds += elapseSeconds;
                 if (m_GotoMenuDelaySeconds >= GameOverDelayedSeconds)
                 {
-                    procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.SelectRole);
-                    procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureMenu));
+                    procedureOwner.SetData<VarInt>(Constant.ProcedureData.NEXT_SCENE_ID, (int)SceneType.SelectRole);
+                    procedureOwner.SetData<VarType>(Constant.ProcedureData.NEXT_PROCEDURE, typeof(ProcedureMenu));
                     ChangeState<ProcedureChangeScene>(procedureOwner);
                     return;
                 }
@@ -115,6 +119,13 @@ namespace SuperBiomass
                 }
 
                 m_MyPlayer.Move();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                m_NetworkChannel.Send(new CSMailList() {
+                     MailCount = 100,
+                });
             }
         }
 

@@ -61,7 +61,9 @@ namespace SuperBiomass
         /// </summary>
         public void Init()
         {
-            m_CameraUpAndDown.SetLocalEulerAnglesX(Mathf.Clamp(m_CameraUpAndDown.localEulerAngles.x, 20f, 80f));
+            Vector3 angles = m_CameraUpAndDown.localEulerAngles;
+            angles.x = Mathf.Clamp(m_CameraUpAndDown.localEulerAngles.x, 20f, 80f);
+            m_CameraUpAndDown.localEulerAngles = angles;
         }
 
         /// <summary>

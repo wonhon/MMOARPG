@@ -58,8 +58,8 @@ namespace SuperBiomass
 
             if (m_SelectRole)
             {
-                procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.SelectRole);
-                procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureMenu));
+                procedureOwner.SetData<VarInt>(Constant.ProcedureData.NEXT_SCENE_ID, (int)SceneType.SelectRole);
+                procedureOwner.SetData<VarType>(Constant.ProcedureData.NEXT_PROCEDURE, typeof(ProcedureMenu));
                 ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }

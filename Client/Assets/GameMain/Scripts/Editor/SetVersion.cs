@@ -17,7 +17,7 @@ namespace SuperBiomass.Editor
             
             string data = LitJson.JsonMapper.ToJson(versionInfo);
 
-            string path = Utility.Path.GetCombinePath(Application.dataPath, "GameMain/Configs/Version.txt");
+            string path = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "GameMain/Configs/Version.txt"));
             using (FileStream fs = new FileStream(path, FileMode.Create))
             {
                 byte[] bytes = Utility.Converter.GetBytes(data);

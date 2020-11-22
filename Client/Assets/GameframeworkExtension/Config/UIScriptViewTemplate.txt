@@ -1,0 +1,18 @@
+﻿//===================================================
+//作    者：#AUTHOR#
+//创建时间：#DATATIME#
+//备    注：
+//===================================================
+
+using UnityEngine;
+
+namespace #NAMESPACE#
+{
+    sealed partial class #CLASSNAME# : View
+    {
+        public void Init()
+        {
+            //InitReference();
+        }
+    }
+}

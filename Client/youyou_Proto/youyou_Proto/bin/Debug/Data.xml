@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Menu MenuId="636191639980995351" MenuName="系统相关" HasChild="true">
+    <Proto ProtoID="636191640570306165" ProtoCode="10001" ProtoEnName="CSHeartBeat" ProtoCnName="客户端发送心跳" ProtoDesc="" ProtoCategory="C2MS" IsCSharp="true" IsLua="false">
+      <Attr AttID="636191641910413686" AttType="float" AttEnName="LocalTime" AttCnName="本地时间(毫秒)" AttIsLoop="false" AttToLoop="" AttToBool="" AttToBoolResult="false" AttToCus="" AttIsExistsProto="false" />
+    </Proto>
+    <Proto ProtoID="636191641969648279" ProtoCode="10002" ProtoEnName="SCHeartBeat" ProtoCnName="服务器返回心跳" ProtoDesc="" ProtoCategory="MS2C" IsCSharp="true" IsLua="false">
+      <Attr AttID="636191643359810618" AttType="float" AttEnName="LocalTime" AttCnName="客户端发送的本地时间(毫秒)" AttIsLoop="false" AttToLoop="" AttToBool="" AttToBoolResult="false" AttToCus="" AttIsExistsProto="false" />
+      <Attr AttID="636191643359810619" AttType="long" AttEnName="ServerTime" AttCnName="服务器时间(毫秒)" AttIsLoop="false" AttToLoop="" AttToBool="" AttToBoolResult="false" AttToCus="" AttIsExistsProto="false" />
+    </Proto>
+  </Menu>
+  <Menu MenuId="637105691959420801" MenuName="邮件" HasChild="true">
+    <Proto ProtoID="637105692023164447" ProtoCode="11001" ProtoEnName="CSMailList" ProtoCnName="请求邮件列表" ProtoDesc="请求邮件列表" ProtoCategory="C2MS" IsCSharp="true" IsLua="false">
+      <Attr AttID="637107480990972805" AttType="int" AttEnName="MailCount" AttCnName="邮件数量" AttIsLoop="true" AttToLoop="" AttToBool="" AttToBoolResult="false" AttToCus="" AttIsExistsProto="false" />
+      <Attr AttID="637107480990972806" AttType="MailInfo" AttEnName="Mail" AttCnName="邮件信息" AttIsLoop="false" AttToLoop="MailCount" AttToBool="" AttToBoolResult="false" AttToCus="" AttIsExistsProto="false" />
+      <Attr AttID="637107480990972807" AttType="int" AttEnName="MailId" AttCnName="邮件编号" AttIsLoop="false" AttToLoop="" AttToBool="" AttToBoolResult="false" AttToCus="Mail" AttIsExistsProto="false" />
+      <Attr AttID="637108086027566649" AttType="int" AttEnName="MailType" AttCnName="邮件类型" AttIsLoop="false" AttToLoop="" AttToBool="" AttToBoolResult="false" AttToCus="Mail" AttIsExistsProto="false" />
+    </Proto>
+  </Menu>
+</Root>

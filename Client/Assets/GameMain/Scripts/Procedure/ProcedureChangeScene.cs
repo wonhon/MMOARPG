@@ -107,8 +107,8 @@ namespace SuperBiomass
         private void DoLodingFormOpened()
         {
             // 获得场景加载完后的运行的下一个流程
-            if (m_ProcedureOwner.HasData(Constant.ProcedureData.NextProcedure))
-                m_ChangeToProcedure = m_ProcedureOwner.GetData<VarType>(Constant.ProcedureData.NextProcedure).Value;
+            if (m_ProcedureOwner.HasData(Constant.ProcedureData.NEXT_PROCEDURE))
+                m_ChangeToProcedure = m_ProcedureOwner.GetData<VarType>(Constant.ProcedureData.NEXT_PROCEDURE).Value;
 
             // 停止所有声音
             GameEntry.Sound.StopAllLoadingSounds();
@@ -128,7 +128,7 @@ namespace SuperBiomass
             // 还原游戏速度
             GameEntry.Base.ResetNormalGameSpeed();
 
-            int sceneId = m_ProcedureOwner.GetData<VarInt>(Constant.ProcedureData.NextSceneId).Value;
+            int sceneId = m_ProcedureOwner.GetData<VarInt>(Constant.ProcedureData.NEXT_SCENE_ID).Value;
             IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
             DRScene drScene = dtScene.GetDataRow(sceneId);
             if (drScene == null)

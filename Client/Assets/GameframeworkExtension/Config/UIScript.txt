@@ -1,0 +1,32 @@
+﻿//===================================================
+//作    者：#AUTHOR#
+//创建时间：#DATATIME#
+//备    注：
+//===================================================
+
+using UnityEngine;
+using UnityGameFramework.Runtime;
+
+namespace #NAMESPACE#
+{
+    [RequireComponent(typeof(#CLASSNAME#View))]
+    sealed class #CLASSNAME# : UGuiForm
+    {
+        private #CLASSNAME#View m_View;
+
+        protected override void OnInit(object userData)
+        {
+            base.OnInit(userData);
+
+            m_View = GetComponent<#CLASSNAME#View>();
+            m_View.Init();
+        }
+
+		protected override void OnOpen(object userData)
+        {
+            base.OnOpen(userData);
+
+            m_View.OnOpen(UIForm.SerialId);
+        }
+    }
+}

@@ -82,8 +82,8 @@ namespace SuperBiomass
                 }
             }
 
-            procedureOwner.SetData<VarInt>(Constant.ProcedureData.NextSceneId, (int)SceneType.LogOn);
-            procedureOwner.SetData<VarType>(Constant.ProcedureData.NextProcedure, typeof(ProcedureLogOn));
+            procedureOwner.SetData<VarInt>(Constant.ProcedureData.NEXT_SCENE_ID, (int)SceneType.LogOn);
+            procedureOwner.SetData<VarType>(Constant.ProcedureData.NEXT_PROCEDURE, typeof(ProcedureLogOn));
             ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 

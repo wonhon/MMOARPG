@@ -1,0 +1,28 @@
+using GameFramework.Network;
+using UnityGameFramework.Runtime;
+
+//===================================================
+//作    者：#Author#
+//创建时间：#CreateTime#
+//备    注：#Describte#
+//===================================================
+
+namespace #NameSpace#
+{
+    public class #ScriptName#Handler : PacketHandlerBase
+    {
+        public override int Id
+        {
+            get
+            {
+                return #ProtoCodeDef#;
+            }
+        }
+
+        public override void Handle(object sender, Packet packet)
+        {
+            #ScriptName# packetImpl = (#ScriptName#)packet;
+            Log.Info("Receive packet '{0}'.", packetImpl.Id.ToString());
+        }
+    }
+}

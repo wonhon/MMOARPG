@@ -13,7 +13,7 @@ namespace SuperBiomass
     public class HPBarItemObject : ObjectBase
     {
         public HPBarItemObject(object target)
-            : base(target)
+            : base()
         {
 
         }

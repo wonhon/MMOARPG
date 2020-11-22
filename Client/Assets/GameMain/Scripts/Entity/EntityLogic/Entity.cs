@@ -64,7 +64,7 @@ namespace SuperBiomass
 #if UNITY_2017_3_OR_NEWER
         protected override void OnHide(bool isShutdown, object userData)
 #else
-        protected internal override void OnHide(object userData)
+        protected internal override void OnHide(bool isShutdown, object userData)
 #endif
         {
             base.OnHide(isShutdown, userData);
